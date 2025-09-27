@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Відео-дзвінок</title>
+    <style>
+        body { display: flex; flex-direction: column; align-items: center; gap: 15px; background: #111; color: white; font-family: sans-serif; }
+        video { width: 45%; max-width: 400px; background: black; border: 2px solid #555; border-radius: 8px; }
+        button { padding: 10px 15px; margin: 10px; border: none; border-radius: 6px; background: #0066ff; color: white; cursor: pointer; }
+        button:hover { background: #004bcc; }
+    </style>
+</head>
+<body>
+<h2>👩‍👦 Відео-дзвінок</h2>
+
+<div>
+    <video id="localVideo" autoplay playsinline muted></video>
+    <video id="remoteVideo" autoplay playsinline></video>
+</div>
+
+<button id="joinBtn">Приєднатись</button>
+
+<!-- Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js"></script>
+
+<!-- Наш код -->
+<script type="module" src="./script.js"></script>
+</body>
+</html>
